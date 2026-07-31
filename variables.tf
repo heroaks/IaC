@@ -1,24 +1,24 @@
 variable "aws_region" {
   description = "AWS region where resources will be deployed"
-  type = string
-  default = "ap-south-1"
+  type        = string
+  default     = "ap-south-1"
 }
 variable "project_name" {
   description = "Project name used for resource naming and tagging"
-  type = string
-  default = "terraform-ec2"
+  type        = string
+  default     = "terraform-ec2"
 }
 variable "environment" {
   description = "Deployment environment"
-  type = string
-  default = "dev"
+  type        = string
+  default     = "dev"
 }
 variable "instance_type" {
   description = "EC2 instance type"
-  type = string
-  default = "t3.micro"
+  type        = string
+  default     = "t3.micro"
 }
 variable "allowed_ssh_cidr" {
   description = "CIDR allowed to access SSH."
-  type = string
+  type        = string
 }

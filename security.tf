@@ -1,20 +1,20 @@
 resource "aws_security_group" "ec2" {
-  name = "${var.project_name}-sg"
+  name        = "${var.project_name}-sg"
   description = "Security group for Ec2 instance"
-  vpc_id = aws_vpc.main.id
+  vpc_id      = aws_vpc.main.id
 
   ingress {
     description = "SSH"
-    from_port = 22
-    to_port = 22
-    protocol = "tcp"
+    from_port   = 22
+    to_port     = 22
+    protocol    = "tcp"
     cidr_blocks = [var.allowed_ssh_cidr]
   }
   egress {
     description = "Allow outbound traffic"
-    from_port = 0
-    to_port = 0
-    protocol = "-1"
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
   }
 
