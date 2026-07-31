@@ -22,3 +22,8 @@ variable "allowed_ssh_cidr" {
   description = "CIDR allowed to access SSH."
   type        = string
 }
+variable "root_volume_size" {
+  description = "Provide the root volume EBS size in GiB."
+  type = number
+  default = 20
+}
