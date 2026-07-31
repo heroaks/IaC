@@ -1,0 +1,5 @@
+aws_region = "ap-south-1"
+project_name = "terraform-ec2"
+environment = "dev"
+instance_type = "t3.micro"
+allowed_ssh_cidr = "<Public IP>/32"
