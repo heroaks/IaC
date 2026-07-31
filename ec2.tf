@@ -8,10 +8,10 @@ resource "aws_instance" "this" {
   key_name = aws_key_pair.ec2.key_name
 
   root_block_device {
-    volume_size = var.root_volume_size
-    volume_type = "gp3"
+    volume_size           = var.root_volume_size
+    volume_type           = "gp3"
     delete_on_termination = true
-    encrypted = true
+    encrypted             = true
   }
 
   tags = {
